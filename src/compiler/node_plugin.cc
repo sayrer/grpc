@@ -52,9 +52,9 @@ class NodeGrpcGenerator : public grpc::protobuf::compiler::CodeGenerator {
                 grpc::protobuf::compiler::GeneratorContext *context,
                 grpc::string *error) const {
     grpc::string code = GenerateFile(file);
-    if (code.size() == 0) {
+    /* if (code.size() == 0) {
       return true;
-    }
+    } */
 
     // Get output file name
     grpc::string file_name = GetJSServiceFilename(file->name());
